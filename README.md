@@ -6,6 +6,8 @@
 
 It is useful for Codex Desktop users who update frequently and want a concise explanation of what changed, what matters in normal use, and which not-yet-installed plugins or Skills may be worth considering.
 
+This is an unofficial community Skill for Codex users.
+
 ## Features
 
 - Compares the current Codex Desktop version with the last recorded briefing version.
@@ -85,5 +87,4 @@ Suggestions and bug reports are welcome through GitHub Issues.
 
 ## License
 
-License is not included yet. MIT is a reasonable default for this small open-source Skill, but it should be confirmed before publishing.
-
+MIT License. See [LICENSE](LICENSE).

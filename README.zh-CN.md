@@ -6,6 +6,8 @@
 
 它适合经常更新 Codex Desktop、但不想逐条读更新日志的用户：你可以快速知道这几次更新累计改变了什么、对日常使用有什么影响，以及有哪些尚未安装但可能值得考虑的插件或 Skill。
 
+这是一个面向 Codex 用户的非官方社区 Skill。
+
 ## 功能
 
 - 比较当前 Codex Desktop 版本和上次简报记录版本。
@@ -86,5 +88,4 @@ python path\to\quick_validate.py .\codex-update-briefing
 
 ## License
 
-暂未加入许可证。对这个小型开源 Skill 来说，MIT 是比较合适的默认选择，但发布前应先确认。
-
+MIT License。见 [LICENSE](LICENSE)。
