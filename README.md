@@ -2,20 +2,26 @@
 
 [简体中文](README.zh-CN.md)
 
-`codex-update-briefing` is a Codex Skill for producing a practical Codex Desktop update briefing. It compares the user's last recorded briefing version with the currently installed Codex version, checks official release information, summarizes cumulative changes, and calls out plugin or Skill availability changes.
+Codex Desktop moves quickly, but most update notes answer only one question: what changed in the latest release? Returning users often need a different answer: what changed since the last time I checked?
 
-It is useful for Codex Desktop users who update frequently and want a concise explanation of what changed, what matters in normal use, and which not-yet-installed plugins or Skills may be worth considering.
+`codex-update-briefing` is an unofficial community Skill for Codex users. It turns Codex updates into a practical briefing by remembering the last version you reviewed, summarizing the full update range since then, and checking plugin or Skill changes that may affect your workflow.
 
-This is an unofficial community Skill for Codex users.
+## Why It Exists
 
-## Features
+A normal changelog is organized around releases. A useful personal briefing is organized around continuity.
 
-- Compares the current Codex Desktop version with the last recorded briefing version.
-- Produces a cumulative update summary instead of only summarizing the latest version.
-- Checks official OpenAI Codex changelog and GitHub release sources.
-- Distinguishes plugin and Skill status such as installable, bundled/default, installed/cached, active, and newly observed.
-- Recommends only not-yet-installed plugins or Skills, and records recommendation history to avoid repeating the same suggestions.
-- Keeps local state in a user-local Codex directory instead of project source files.
+This Skill keeps a small local state file with the last reported Codex version. On the next run, it compares that version with the currently installed Codex version, looks up official release information, and produces a cumulative summary for the whole interval. If you skipped several updates, you get one readable briefing instead of reconstructing the story from multiple release notes.
+
+It also treats plugin and Skill recommendations as a noise-control problem. It can use the current session's memory or workflow context, but it recommends only not-yet-installed items that appear relevant. Bundled, installed, cached, active, and previously recommended items are filtered out.
+
+## Highlights
+
+- **Cumulative update briefings**: summarizes the range since the last recorded briefing, not only the newest release.
+- **Official-source first**: uses the OpenAI Codex changelog and `openai/codex` GitHub releases as primary evidence.
+- **Plugin and Skill change detection**: classifies items as installable, bundled/default, installed/cached, active, or newly observed.
+- **Context-aware recommendations**: uses available memory or workflow context to suggest only not-yet-installed plugins or Skills that fit the user's actual work.
+- **Recommendation history**: avoids repeating the same suggestion in future briefings.
+- **Portable local state**: stores state in the user's Codex directory, not in the project repository.
 
 ## Install
 
@@ -42,11 +48,11 @@ Ask Codex:
 Use $codex-update-briefing to summarize what changed since my last Codex update briefing.
 ```
 
-The first run establishes a baseline if no previous state exists. Later runs can compare against the saved state and report cumulative changes.
+The first run establishes a baseline if no previous state exists. Later runs compare against the saved state and report cumulative changes.
 
 ## Local State
 
-The Skill is designed to keep a small JSON state file in a user-local Codex state directory. The state may include:
+The Skill keeps a small JSON state file in a user-local Codex state directory. The state may include:
 
 - last reported Codex version
 - last reported time
@@ -58,7 +64,9 @@ The state file is intentionally not part of this repository.
 
 ## Privacy Notes
 
-This public version avoids user-specific absolute paths and personal workflow details. It instructs Codex to read memory only at run time when the current session provides memory guidance. If memory is unavailable, personalized recommendations should be skipped instead of guessed.
+This public version avoids user-specific absolute paths and personal workflow details. It reads memory only at run time when the current agent environment provides memory guidance. If memory or workflow context is unavailable, personalized recommendations should be skipped instead of guessed.
+
+The Skill should not copy personal memory content into the repository, and recommendation history should store only concise item names and short reason summaries.
 
 ## Verification
 
@@ -88,3 +96,4 @@ Suggestions and bug reports are welcome through GitHub Issues.
 ## License
 
 MIT License. See [LICENSE](LICENSE).
+
