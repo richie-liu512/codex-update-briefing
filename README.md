@@ -6,8 +6,6 @@ Codex Desktop updates often arrive quietly. The app version changes, but users s
 
 `codex-update-briefing` turns Codex updates into a practical briefing. It remembers the last version you checked, summarizes the full update range since then, checks plugin and Skill changes, and uses your global memory or available workflow context to recommend not-yet-installed tools that can help your daily Codex work.
 
-## Why It Exists
-
 Codex is a daily productivity tool, and it changes quickly. New releases can affect how you prompt, which tools are available, what plugins or Skills are worth using, and how much leverage you get from the app.
 
 Most users do not have time to track every update manually. This Skill keeps a small local state file with the last reported Codex version. On the next run, it compares that version with the currently installed Codex version and produces one readable briefing for the whole interval. If you skipped several versions, you still get the full story since your last briefing.
