@@ -1,0 +1,13 @@
+.DS_Store
+Thumbs.db
+
+# Local Codex state and generated run artifacts
+*.log
+logs/
+state/
+*.tmp
+
+# Editor and OS metadata
+.idea/
+.vscode/
+

@@ -1,0 +1,8 @@
+interface:
+  display_name: "Codex Update Briefing"
+  short_description: "Summarize Codex updates, plugins, and Skills"
+  default_prompt: "Use $codex-update-briefing to summarize official Codex updates since the last recorded briefing, check plugin and Skill changes, and recommend only not-yet-installed items worth considering."
+
+policy:
+  allow_implicit_invocation: true
+
