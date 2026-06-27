@@ -2,9 +2,9 @@
 
 [简体中文](README.zh-CN.md)
 
-Because the AI industry is moving quickly, Codex updates frequently, and each update can bring new features, plugins, or ways to work. Understanding those changes helps users adjust their workflows and work more efficiently. But Codex Desktop does not summarize those changes after each update, and reading through changelogs manually can be tedious.
+Driven by the rapid pace of the AI industry, Codex updates frequently, introducing new features, plugins, or workflows with each release. If you use Codex frequently, staying on top of these changes helps you promptly adjust your workflow and boost productivity. However, Codex does not proactively summarize these updates, and manually combing through changelogs is both time-consuming and tedious.
 
-`codex-update-briefing` records the version from your last briefing, compares it with the version installed now, and summarizes the whole interval rather than only the newest release. It also checks plugin and Skill status, uses global memory to recommend not-yet-installed tools that can help your work, and remembers past recommendations so the same items are not suggested again.
+`codex-update-briefing` was built specifically to address this pain point. It tracks the version from your last briefing and compares it with your current version to recap the cumulative changes over that period, rather than just focusing on the single latest release. Additionally, it scans the status of your plugins and Skills, leveraging global memory to recommend helpful, uninstalled tools while maintaining a recommendation history to prevent repetitive notifications.
 
 ## Highlights
 
